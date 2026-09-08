@@ -1,12 +1,12 @@
-# FinTrack – Personal Finance & Budget Tracker 💰
+# FinTrack – Personal Finance & Budget Tracker
 
-Welcome to **FinTrack**, a sleek, modern, and highly interactive Full-Stack web application designed to track your cashflow securely and beautifully. 
+Welcome to **FinTrack**, a sleek, modern, and highly interactive Full-Stack web application designed to track your cashflow securely and beautifully.
 
 It was built utilizing a premium **Fintech Glassmorphism** aesthetic, bringing financial analytics to life using custom micro-interactions, responsive sidebars, and fluid mathematical charting.
 
 ---
 
-## 🎨 Design & Architecture
+## Design & Architecture
 
 FinTrack uses a two-folder monorepo architecture:
 - **`server/`** – A lightweight Node.js/Express backend that handles mathematical processing, transaction logging, budgeting bounds, and CORS routing.
@@ -14,12 +14,12 @@ FinTrack uses a two-folder monorepo architecture:
 
 ---
 
-## 🔥 Key Core Features
+## Key Core Features
 
 ### 1. The Dynamic Dashboard (`/`)
 The main dashboard serves as a high-fidelity visual summary of your exact net capacity. It features:
 - **Three Header Metric Cards**: Isolated representations for strictly your Total Balance, Total Income, and Total Expenses.
-- **Bar Chart Analytics**: A Recharts integration comparing incoming money versus outgoing money chronologically. 
+- **Bar Chart Analytics**: A Recharts integration comparing incoming money versus outgoing money chronologically.
 - **Pie Chart Segmenter**: A visual, mathematically constrained map calculating your exact expenses grouped beautifully across predefined categories relying on an Emerald-to-Rose dynamic color palette.
 
 ### 2. Transaction Management Ledger (`/transactions`)
@@ -29,20 +29,20 @@ A formal historical ledger table displaying chronological histories of all input
 
 ### 3. Smart Budget Planner (`/budget`)
 Allows you to mathematically target hard constraints on categories.
-- **Limit Settings**: Allows you to type custom threshold amounts into fluid input modes per category (`Food`, `Entertaintment`, etc.). 
+- **Limit Settings**: Allows you to type custom threshold amounts into fluid input modes per category (`Food`, `Entertainment`, etc.).
 - **Active Calculus**: Modifying these limits instantly sends `PUT` requests to the Node server, actively refreshing the categorized progress bars. If a transaction pushes its category above 100%, the metric bar inherently snaps completely to Rose Warning coloring.
 
 ### 4. Slide-Over Global Modal
-To optimize User Experience natively, writing a new transaction doesn't bounce you to an empty blank form. Instead, anywhere across the entire application interface, triggering "Add Transaction" slides a sleek, backdrop-blurred drawer panel across the window. 
+To optimize User Experience natively, writing a new transaction doesn't bounce you to an empty blank form. Instead, anywhere across the entire application interface, triggering "Add Transaction" slides a sleek, backdrop-blurred drawer panel across the window.
 - Features interactive "Income" / "Expense" strict toggles explicitly converting positive integers securely.
 
 ---
 
-## 🚀 How to Launch the Application
+## How to Launch the Application
 
 Because this application relies on active Backend math parsing alongside Frontend visual state layers, both independent programs must be run locally in parallel across two distinct terminals.
 
-### Step 1: Start the Backend server 
+### Step 1: Start the Backend server
 Open your terminal (or Terminal #1 inside VS Code) and navigate to the project directory:
 ```bash
 > cd server
@@ -60,16 +60,16 @@ Open a brand new, secondary terminal (Terminal #2) inside the standard project f
 ```
 
 Once successful, your default browser will instantaneously spin up pointing securely to:
-👉 **[http://localhost:3000](http://localhost:3000)**
+**http://localhost:3000**
 
 ---
 
-## ⚙️ Backend API Overview
+## Backend API Overview
 
-The backend acts entirely in-memory tracking lightweight session JSON arrays to provide instantaneous local interactions. 
+The backend acts entirely in-memory tracking lightweight session JSON arrays to provide instantaneous local interactions.
 
 - **`GET /transactions`** - Delivers chronological histories.
-- **`POST /transactions`** - Injects signed positive/negative items strictly formatted. 
+- **`POST /transactions`** - Injects signed positive/negative items strictly formatted.
 - **`DELETE /transactions/:id`** - Safely purges an element globally.
 - **`GET /budgets`** - An inherently intelligent route combining raw transaction footprints filtered natively against assigned boundaries generating mathematically completed `%` calculations directly.
 - **`PUT /budgets/:category`** - Accepts new limit boundaries.
